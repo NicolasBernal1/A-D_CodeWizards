@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from res.data import variables, text
+from src.view.formula import Formula
 
 class Welcome:
     def __init__(self):
@@ -112,6 +113,10 @@ class Welcome:
         print("Next frame")
         print(self.data)
         self.stop()
+        
+        next_frame = Formula(self.data)
+        next_frame.run()
+        
 
     def run(self):
         self.root.mainloop()
