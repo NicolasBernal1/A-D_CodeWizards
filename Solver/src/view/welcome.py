@@ -109,11 +109,9 @@ class Welcome:
         return self.data
 
     def next_frame(self):
-        self.get_data()
-        print("Next frame")
-        print(self.data)
         self.stop()
         
+        self.get_data()
         next_frame = Formula(self.data)
         next_frame.run()
         
