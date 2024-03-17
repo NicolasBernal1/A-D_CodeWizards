@@ -39,9 +39,7 @@ class RepitedCombination:
         if m_text.isdigit() and n_text.isdigit():
             m = int(m_text)
             n = int(n_text)
-            print(m,n)
             result = CombinationsWithRepetition(total=m, groups=n)
-            print(result)
             self.label_result.config(text=str(result))
         else:
             self.label_result.config(text=text["digit_error"])
