@@ -111,6 +111,7 @@ class Welcome:
     def next_frame(self):
         self.stop()
         
+        self.get_data()
         next_frame = Formula(self.data)
         next_frame.run()
         

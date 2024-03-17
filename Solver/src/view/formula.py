@@ -18,12 +18,14 @@ class Formula:
         self.root.resizable(0,0)
         self.data = data
 
+        formula = TypeOperation(self.format_data())
+        
         # Frame
         frame = tk.Frame(self.root)
         frame.pack()
         
         # Identificate the formula
-        label1_text = text["formula_is"] +  TypeOperation(self.format_data())
+        label1_text = text["formula_is"] + " " + formula
         
         # Label for the formula
         label2_formula = formula_desc[TypeOperation(self.format_data())]
@@ -35,8 +37,25 @@ class Formula:
         label2.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
         
         # Button for go to OrdinaryCombination
-        button1 = tk.Button(frame, text=text["next"], command=self.goto_ordinary_combination)
+        button1 = tk.Button(frame, text=text["next"])
         button1.grid(row=2, column=0, padx=10, pady=10)
+        
+        # Set command for the button1
+        if formula == "permutación con repetición":
+            button1.config(command=self.goto_repited_permutation)
+        elif formula == "permutaciones ordinarias":
+            button1.config(command=self.goto_ordinary_permutation)
+        elif formula == "variaciones con repetición":
+            button1.config(command=self.goto_repited_variation)
+        elif formula == "variaciones ordinarias":
+            button1.config(command=self.goto_ordinary_variation)
+        elif formula == "combinación con repetición":
+            button1.config(command=self.goto_repited_combination)
+        elif formula == "combinaciones ordinarias":
+            button1.config(command=self.goto_ordinary_combination)
+        else:
+            print("Error!")
+        
         
     def format_data(self):
         return (value for value in self.data.values())
