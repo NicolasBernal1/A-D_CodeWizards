@@ -7,7 +7,7 @@
     Returns:
     - A string indicating the type of operation.
 """
-def TypeOperation(user_answers):
+def TypeOperation(user_answers: tuple):
 
     answers = {
         (True, True, True): "permutación con repetición",
@@ -29,7 +29,7 @@ def TypeOperation(user_answers):
     Returns:
     - The factorial of the input number.
 """
-def Factorial(number):
+def Factorial(number: int):
   fact = 1
   for i in range(1, number + 1):
       fact *= i
@@ -46,7 +46,7 @@ def Factorial(number):
     Returns:
     - The number of variations with repetition.
 """
-def VariationsWithRepetition (total, groups):
+def VariationsWithRepetition (total: int, groups: int):
     while True:
         try:
             return total ** groups
@@ -63,7 +63,7 @@ def VariationsWithRepetition (total, groups):
     Returns:
     - The number of variations without repetition.
 """
-def VariationsWithoutRepetition (total, groups):
+def VariationsWithoutRepetition (total: int, groups: int):
     while True:
         try:
             return Factorial(total) / Factorial(total - groups)
@@ -80,7 +80,7 @@ def VariationsWithoutRepetition (total, groups):
     Returns:
     - The number of permutations without repetition.
 """
-def PermutationsWithoutRepetition (total):
+def PermutationsWithoutRepetition (total: int):
     while True:
         try:
             return Factorial(total)
@@ -97,19 +97,10 @@ def PermutationsWithoutRepetition (total):
     Returns:
     - The number of permutations with repetition.
 """
-def PermutationsWithRepetition (total, iterations):
+def PermutationsWithRepetition (total: int, repited_numbers: tuple):
     while True:
         try:
-            repetitions = []
-            for i in range(0, iterations):
-                repetition = int(input("Cuantas veces se repite: "))
-                repetitions.append(repetition)
-            denominator = 1
-            for repetition in repetitions:
-                denominator *= Factorial(repetition)
-
-            return Factorial(total) / denominator
-        
+            pass
         except ValueError:
             print("Error: Ingrese un número válido.")
 
@@ -124,7 +115,7 @@ def PermutationsWithRepetition (total, iterations):
     Returns:
     - The number of combinations without repetition.
 """
-def CombinationsWithoutRepetition (total, groups):
+def CombinationsWithoutRepetition (total: int, groups: int):
     while True:
         try:
             return Factorial(total) / (Factorial(groups) * Factorial(total - groups))
@@ -141,7 +132,7 @@ def CombinationsWithoutRepetition (total, groups):
     Returns:
     - The number of combinations with repetition.
 """
-def CombinationsWithRepetition (total, groups):
+def CombinationsWithRepetition (total: int, groups: int):
     while True:
         try:
             return Factorial(total + groups - 1) / (Factorial(groups) * Factorial(total - 1))
