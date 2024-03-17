@@ -27,7 +27,6 @@ class Formula:
         label2 = tk.Label(frame, text=label2_formula)
         label2.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
         
-
     def format_data(self):
         return (value for value in self.data.values())
     
