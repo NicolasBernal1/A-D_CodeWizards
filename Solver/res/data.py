@@ -1,9 +1,11 @@
 variables = {
     "name": "Solver",
     "developer": "CodeWizard",
-    "size": "500x500",
+    "size": "750x500",
     "resizeble": "false"
 }
+
+developers = ["David Torres", "Nicolás", "Juanpa Ramírez", "Rostin"]
 
 text = {
     "quest1": "¿Importa el orden?",
@@ -16,7 +18,8 @@ text = {
     "total_poblation": "Población total",
     "selected_poblation": "Población seleccionada",
     "solve": "Resolver",
-    "digit_error": "Lo sentimos, pero los datos ingresados no son numeros"
+    "digit_error": "Lo sentimos, pero los datos ingresados no son numeros",
+    "repited_poblation": "Población repetida",
 }
 
 default_data = {

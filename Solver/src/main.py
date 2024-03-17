@@ -1,5 +1,5 @@
-from src.view.welcome import Welcome
+from src.view.mainpage import MainPage
 
 if __name__ == '__main__':
-    frame = Welcome()
+    frame = MainPage()
     frame.run()

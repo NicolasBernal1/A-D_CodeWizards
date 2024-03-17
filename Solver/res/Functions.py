@@ -14,10 +14,16 @@ def isTuple(text: str):
     return bool(re.match(regularExpresson, text))
 
 def strToTuple(text: str) -> tuple:
-    return tuple(char.strip() for char in text.split(",") if char.strip())
-
-
-print(strToTuple("abcde"))
+    """
+    Converts a comma-separated string into a tuple of stripped values.
+    
+    Args:
+        text (str): The comma-separated string to convert.
+        
+    Returns:
+        tuple: A tuple of stripped values from the input string.
+    """
+    return tuple(int(char.strip()) for char in text.split(",") if char.strip())
 
 
 def TypeOperation(user_answers: tuple) -> str:

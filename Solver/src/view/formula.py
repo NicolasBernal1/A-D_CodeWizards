@@ -89,7 +89,7 @@ class Formula:
         self.stop()
         repited_variation_window = RepitedVariation(self.data)
         repited_variation_window.run()
-    
+            
     def run(self):
         self.root.mainloop()
         
