@@ -14,7 +14,9 @@ text = {
     "next": "Siguiente",
     "formula_is": "La formula es: ",
     "total_poblation": "Población total",
-    "selected_poblation": "Población seleccionada"
+    "selected_poblation": "Población seleccionada",
+    "solve": "Resolver",
+    "digit_error": "Lo sentimos, pero los datos ingresados no son numeros"
 }
 
 default_data = {
