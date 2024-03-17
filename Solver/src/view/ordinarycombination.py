@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from res.data import variables
+from res.data import variables, text
 from res.Functions import *
 
 class OrdinaryCombination:
@@ -13,7 +13,7 @@ class OrdinaryCombination:
 
         # Frame
         frame = tk.Frame(self.root)
-        frame.pack()
+        frame.pack()        
     
     def run(self):
         self.root.mainloop()

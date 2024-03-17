@@ -12,7 +12,9 @@ text = {
     "true": "Si",
     "false": "No",
     "next": "Siguiente",
-    "formula_is": "La formula es: "
+    "formula_is": "La formula es: ",
+    "total_poblation": "Población total",
+    "selected_poblation": "Población seleccionada"
 }
 
 default_data = {
