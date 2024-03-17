@@ -3,7 +3,7 @@ from tkinter import ttk
 from res.data import variables
 from res.Functions import *
 
-class Permutation:
+class OrdinaryPermutation:
     def __init__(self, data):
         self.root = tk.Tk()
         self.root.title(variables['name'] + " - " + variables['developer']) 
