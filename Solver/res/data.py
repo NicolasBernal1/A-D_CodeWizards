@@ -11,7 +11,8 @@ text = {
     "quest3": "¿Se repiten elementos?",
     "true": "Si",
     "false": "No",
-    "next": "Siguiente"
+    "next": "Siguiente",
+    "formula_is": "La formula es: "
 }
 
 default_data = {
@@ -21,20 +22,21 @@ default_data = {
 }
 
 formula_desc = {
-    "PERMUTACIONES CON REPETICIÓN": 
+    "permutación con repetición": 
         "Permutaciones en las que algunos elementos pueden repetirse.",
         
-    "PERMUTACIONES ORDINARIAS": 
+    "permutaciones ordinarias": 
         "Permutaciones en las que todos los elementos son distintos.",
         
-    "VARIACIONES CON REPETICIÓN": 
+    "variaciones con repetición": 
         "Variaciones en las que algunos elementos pueden repetirse.",
         
-    "VARIACIONES ORDINARIAS": 
+    "variaciones ordinarias": 
         "Variaciones en las que todos los elementos son distintos.",
         
-    "COMBINACIONES CON REPETICIÓN": 
+    "combinación con repetición": 
         "Combinaciones en las que algunos elementos pueden repetirse.",
         
-    "COMBINACIONES ORDINARIAS": "Combinaciones en las que el orden no importa y los elementos son distintos."
+    "combinaciones ordinarias":
+        "Combinaciones en las que el orden no importa y los elementos son distintos."
 }

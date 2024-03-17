@@ -10,12 +10,12 @@
 def TypeOperation(user_answers):
 
     answers = {
-        (True, True, True): "PERMUTACIONES CON REPETICIÓN",
-        (True, True, False): "PERMUTACIONES ORDINARIAS",
-        (True, False, True): "VARIACIONES CON REPETICIÓN",
-        (True, False, False): "VARIACIONES ORDINARIAS",
-        (False, False, True): "COMBINACIONES CON REPETICIÓN",
-        (False, False, False): "COMBINACIONES ORDINARIAS",
+        (True, True, True): "permutación con repetición",
+        (True, True, False): "permutaciones ordinarias",
+        (True, False, True): "variaciones con repetición",
+        (True, False, False): "variaciones ordinarias",
+        (False, False, True): "combinación con repetición",
+        (False, False, False): "combinaciones ordinarias",
     }
 
     return answers[tuple(user_answers)]
