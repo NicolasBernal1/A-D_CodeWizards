@@ -5,7 +5,6 @@ from res.Functions import *
 from view.ordinarycombination import OrdinaryCombination
 from view.ordinarypermutation import OrdinaryPermutation
 from view.ordinaryvariation import OrdinaryVariation
-
 from view.repitedcombination import RepitedCombination
 from view.repitedpermutation import RepitedPermutation
 from view.repitedvariation import RepitedVariation
