@@ -16,10 +16,10 @@ def isTuple(text: str):
 def strToTuple(text: str) -> tuple:
     """
     Converts a comma-separated string into a tuple of stripped values.
-    
+
     Args:
         text (str): The comma-separated string to convert.
-        
+
     Returns:
         tuple: A tuple of stripped values from the input string.
     """
@@ -42,7 +42,7 @@ def TypeOperation(user_answers: tuple) -> str:
         (True, False, True): "variaciones con repetición",
         (True, False, False): "variaciones ordinarias",
         (False, False, True): "combinación con repetición",
-        (False, False, False): "combinaciones ordinarias",
+        (False, False, False): "combinaciones ordinarias"
     }
 
     return answers[tuple(user_answers)]
@@ -73,6 +73,8 @@ def VariationsWithRepetition (total: int, groups: int) -> float:
     Returns:
     - The number of variations with repetition.
     """
+    if(groups > total):
+        return "Error: no puede haber mas elementos en un grupo que elementos totales"
     while True:
         try:
             return total ** groups
@@ -90,11 +92,16 @@ def VariationsWithoutRepetition (total: int, groups: int) -> float:
     Returns:
     - The number of variations without repetition.
     """
+    if(groups > total):
+        return "Error: no puede haber mas elementos en un grupo que elementos totales"
     while True:
         try:
             return Factorial(total) / Factorial(total - groups)
         except ValueError:
             print("Error: Ingrese un número válido.")
+        #para el error que hay si hay más de un factorial > 85
+        except:
+            return "Error: uno o ambos numeros son demasiado grandes."
 
 def PermutationsWithoutRepetition (total: int) -> float:
     """
@@ -106,6 +113,7 @@ def PermutationsWithoutRepetition (total: int) -> float:
     Returns:
     - The number of permutations without repetition.
     """
+
     while True:
         try:
             return Factorial(total)
@@ -123,6 +131,18 @@ def PermutationsWithRepetition (total: int, repited_numbers: tuple) -> float:
     Returns:
     - The number of permutations with repetition.
     """
+    # Converting into list
+    repited_numbers = list(repited_numbers)
+
+    # Initializing count
+    count = 0
+
+    # for loop
+    for i in repited_numbers:
+        count += i
+
+    if(count > total):
+        return "Error: no puede haber mas elementos repetidos que elementos totales"
     while True:
         try:
             numerator = Factorial(total)
@@ -145,11 +165,16 @@ def CombinationsWithoutRepetition (total: int, groups: int) -> float:
     Returns:
     - The number of combinations without repetition.
     """
+    if (groups > total):
+        return "Error: no puede haber mas elementos en un grupo que elementos totales"
     while True:
         try:
             return Factorial(total) / (Factorial(groups) * Factorial(total - groups))
         except ValueError:
             print("Error: Ingrese un número válido.")
+        #para el error que hay si hay más de un factorial > 85
+        except:
+            return "Error: uno o ambos numeros son demasiado grandes."
 
 def CombinationsWithRepetition (total: int, groups: int) -> float:
     """
@@ -162,8 +187,13 @@ def CombinationsWithRepetition (total: int, groups: int) -> float:
     Returns:
     - The number of combinations with repetition.
     """
+    if(groups > total):
+        return "Error: no puede haber mas elementos en un grupo que elementos totales"
     while True:
         try:
             return Factorial(total + groups - 1) / (Factorial(groups) * Factorial(total - 1))
         except ValueError:
             print("Error: Ingrese un número válido.")
+        #para el error que hay si hay más de un factorial > 85
+        except:
+            return "Error: uno o ambos numeros son demasiado grandes."
